@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+import StudentSearch from '../components/StudentSearch';
+---
+
+<Layout title="VCE Study Scores | 1998-2025 Archive">
+  <section class="pt-20 pb-12">
+    <div class="page-container text-center">
+      <h2 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-6 balance">
+        Every score, <span class="text-trajectory-500">every year.</span>
+      </h2>
+      <p class="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed mb-12">
+        A comprehensive archive of over 360,000 VCE study scores of 40 and above, spanning from 1998 to 2025.
+      </p>
+    </div>
+  </section>
+
+  <div class="page-container">
+    <div class="animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out">
+      <StudentSearch client:load />
+    </div>
+  </div>
+
+  <section class="py-24 border-t border-slate-50 mt-20">
+    <div class="page-container">
+      <div class="grid md:grid-cols-3 gap-12 text-center md:text-left">
+        <div>
+          <div class="w-10 h-10 bg-trajectory-50 rounded-lg flex items-center justify-center mb-4 mx-auto md:mx-0">
+            <svg class="w-5 h-5 text-trajectory-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <h3 class="text-sm font-bold text-slate-900 uppercase tracking-widest mb-2">The Archive</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            Historical study scores from 1998 to 2025, providing a complete picture of high-achieving VCE results over nearly three decades.
+          </p>
+        </div>
+        <div>
+          <div class="w-10 h-10 bg-trajectory-50 rounded-lg flex items-center justify-center mb-4 mx-auto md:mx-0">
+            <svg class="w-5 h-5 text-trajectory-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="text-sm font-bold text-slate-900 uppercase tracking-widest mb-2">Verified Data</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            Sourced exclusively from public records published by the VCAA, ensuring accurate representation of historical student achievements.
+          </p>
+        </div>
+        <div>
+          <div class="w-10 h-10 bg-trajectory-50 rounded-lg flex items-center justify-center mb-4 mx-auto md:mx-0">
+            <svg class="w-5 h-5 text-trajectory-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-sm font-bold text-slate-900 uppercase tracking-widest mb-2">Fast Search</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            Optimised for speed, allowing you to quickly filter through hundreds of thousands of records by name, school, or subject.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .balance {
+    text-wrap: balance;
+  }
+</style>

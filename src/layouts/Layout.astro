@@ -1,0 +1,70 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'Search historical VCE study scores from 1998 to 2025. Archive of students who achieved a study score of 40 or higher.'
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="theme-color" content="#d6001c" />
+  </head>
+  <body class="bg-white min-h-screen flex flex-col font-sans selection:bg-trajectory-100 selection:text-trajectory-900">
+    <header class="py-6 border-b border-slate-50">
+      <div class="page-container">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <a href="https://trajectoryeducation.com.au" class="transition-opacity hover:opacity-80" aria-label="Trajectory Education">
+              <div class="w-10 h-10 flex items-center justify-center">
+                <img src="/images/logo.svg" alt="Trajectory Logo" class="w-full h-full object-contain" />
+              </div>
+            </a>
+            <a href="/" class="transition-opacity hover:opacity-80">
+              <div>
+                <h1 class="text-xl font-bold text-slate-900 leading-none">VCE Study Scores</h1>
+                <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold mt-1">1998 — 2025 Archive</p>
+              </div>
+            </a>
+          </div>
+          
+          <nav>
+            <a href="mailto:hi@trajectoryeducation.com.au" class="text-sm font-medium text-slate-400 hover:text-trajectory-500 transition-colors">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <footer class="py-12 border-t border-slate-50 mt-20">
+      <div class="page-container">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div class="text-center md:text-left">
+            <p class="text-sm font-bold text-slate-900">VCE Study Scores Archive</p>
+            <p class="text-xs text-slate-400 mt-1">© {new Date().getFullYear()} All rights reserved.</p>
+          </div>
+          <div class="flex gap-8">
+             <p class="text-[10px] text-slate-300 max-w-[240px] text-center md:text-right italic leading-relaxed">
+                Scores of 40+ as published in public records. While we strive for accuracy, some data may be incomplete.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
