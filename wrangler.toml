@@ -1,0 +1,13 @@
+name = "vcestudyscores-com"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+main = "./dist/_worker.js/index.js"
+
+# Assets are bundled with the worker
+assets = { directory = "./dist", binding = "ASSETS" }
+
+# KV binding for sessions (if using sessions)
+# [[kv_namespaces]]
+# binding = "SESSION"
+# id = "your-kv-namespace-id"
