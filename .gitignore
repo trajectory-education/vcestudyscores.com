@@ -11,6 +11,9 @@ dist/
 .env.local
 .env.*.local
 
+# Student data (migrated to Supabase)
+src/data/
+
 # IDEs and editors
 .vscode/
 .idea/
