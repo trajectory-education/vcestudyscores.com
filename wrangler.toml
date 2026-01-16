@@ -1,11 +1,9 @@
-name = "vcestudyscores-com"
+name = "vcestudyscoresdotcom"
 compatibility_date = "2024-01-01"
 compatibility_flags = ["nodejs_compat"]
 
-main = "./dist/_worker.js/index.js"
-
-# Assets are bundled with the worker
-assets = { directory = "./dist", binding = "ASSETS" }
+# For Cloudflare Pages deployment
+pages_build_output_dir = "./dist"
 
 # KV binding for sessions (if using sessions)
 # [[kv_namespaces]]
